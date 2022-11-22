@@ -1,0 +1,54 @@
+GET http://localhost:5000/api/auth/login
+Content-Type: application/json
+
+{
+    "username": "hau",
+    "password": "hau381998",
+}
+###
+POST   http://localhost:5000/api/auth/login
+Content-Type: application/json
+
+{
+    "username": "hau",
+    "password": "hau381998"
+}
+
+
+###
+POST http://localhost:5000/api/posts
+content-type: application/json
+authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MzYxZGIzNTQwMWFkZjU0OTUzZGVhYjYiLCJpYXQiOjE2NjczNzUzNjN9.wIUP8Yiu-zrtW17lYIRO3O1NRZXSwP_BIwT4slLo1F8
+
+{
+    "title": "my 45 post",
+    "description": "abc",
+    "url":"google.com",
+    "status":"LEARNING",
+}
+###
+get http://localhost:5000/api/posts
+authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MzYxZGIzNTQwMWFkZjU0OTUzZGVhYjYiLCJpYXQiOjE2NjczNzUzNjN9.wIUP8Yiu-zrtW17lYIRO3O1NRZXSwP_BIwT4slLo1F8
+
+
+
+
+###
+PUT  http://localhost:5000/api/posts/636221683b51375592c47690
+authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MzYxZGIzNTQwMWFkZjU0OTUzZGVhYjYiLCJpYXQiOjE2NjczNzUzNjN9.wIUP8Yiu-zrtW17lYIRO3O1NRZXSwP_BIwT4slLo1F8
+content-type: application/json
+
+{
+    "title": "new post",
+    "description": "abc",
+    "url":"google.com",
+    "status":"LEARNED"
+}
+###
+DELETE http://localhost:5000/api/posts/636221683b51375592c47690
+authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MzYxZGIzNTQwMWFkZjU0OTUzZGVhYjYiLCJpYXQiOjE2NjczNzUzNjN9.wIUP8Yiu-zrtW17lYIRO3O1NRZXSwP_BIwT4slLo1F8
+
+
+### 
+GET http://localhost:5000/api/auth
+authorization: Bearer 
